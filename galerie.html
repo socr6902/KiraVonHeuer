@@ -18,57 +18,80 @@
       <a href="books.html">Books</a>
       <a href="about.html">About</a>
     </nav>
+    <div class="header-icons">
+      <a href="https://instagram.com/kiravonheuer" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        </svg>
+      </a>
+      <a href="contact.html" aria-label="Contact">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+      </a>
+      <a href="#" class="cart-icon" aria-label="Shopping cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="9" cy="21" r="1"/>
+          <circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        <span class="cart-count">0</span>
+      </a>
+    </div>
   </header>
 
-  <main class="galerie-index">
+  <main class="homepage-gallery" style="padding: var(--spacing-xl) var(--spacing-md);">
     
-    <article class="exhibition-entry">
-      <a href="galerie/water-chapels.html" class="exhibition-link">
-        <div class="exhibition-image">
-          <img src="images/water-chapels-hero.jpg" alt="Water Chapels" loading="lazy" />
-        </div>
-        <div class="exhibition-info">
-          <h2>Water Chapels</h2>
-          <p class="exhibition-location">Paris, 2024</p>
-        </div>
-      </a>
-    </article>
+    <div class="gallery-item" data-link="galerie/water-chapels.html">
+      <div style="background-color: #e8e6e1; aspect-ratio: 3/4; width: 100%;">
+        <img src="images/water-chapels-1.jpg" alt="Water Chapels" style="display: none;" />
+      </div>
+    </div>
 
-    <article class="exhibition-entry">
-      <a href="galerie/mirrored-labyrinths.html" class="exhibition-link">
-        <div class="exhibition-image">
-          <img src="images/mirrored-labyrinths-hero.jpg" alt="Mirrored Labyrinths" loading="lazy" />
-        </div>
-        <div class="exhibition-info">
-          <h2>Mirrored Labyrinths</h2>
-          <p class="exhibition-location">Berlin, 2023</p>
-        </div>
-      </a>
-    </article>
+    <div class="gallery-item" data-link="galerie/mirrored-labyrinths.html">
+      <div style="background-color: #e8e6e1; aspect-ratio: 3/4; width: 100%;">
+        <img src="images/mirrored-labyrinths-1.jpg" alt="Mirrored Labyrinths" style="display: none;" />
+      </div>
+    </div>
 
-    <article class="exhibition-entry">
-      <a href="galerie/salt-rooms.html" class="exhibition-link">
-        <div class="exhibition-image">
-          <img src="images/salt-rooms-hero.jpg" alt="Salt Rooms" loading="lazy" />
-        </div>
-        <div class="exhibition-info">
-          <h2>Salt Rooms</h2>
-          <p class="exhibition-location">Copenhagen, 2023</p>
-        </div>
-      </a>
-    </article>
+    <div class="gallery-item" data-link="galerie/salt-rooms.html">
+      <div style="background-color: #e8e6e1; aspect-ratio: 3/4; width: 100%;">
+        <img src="images/salt-rooms-1.jpg" alt="Salt Rooms" style="display: none;" />
+      </div>
+    </div>
 
-    <article class="exhibition-entry">
-      <a href="galerie/threshold-objects.html" class="exhibition-link">
-        <div class="exhibition-image">
-          <img src="images/threshold-objects-hero.jpg" alt="Threshold Objects" loading="lazy" />
-        </div>
-        <div class="exhibition-info">
-          <h2>Threshold Objects</h2>
-          <p class="exhibition-location">London, 2022</p>
-        </div>
-      </a>
-    </article>
+    <div class="gallery-item" data-link="galerie/threshold-objects.html">
+      <div style="background-color: #e8e6e1; aspect-ratio: 3/4; width: 100%;">
+        <img src="images/threshold-objects-1.jpg" alt="Threshold Objects" style="display: none;" />
+      </div>
+    </div>
+
+    <div class="gallery-item" data-link="galerie/water-chapels.html">
+      <div style="background-color: #e8e6e1; aspect-ratio: 3/4; width: 100%;">
+        <img src="images/water-chapels-2.jpg" alt="Water Chapels" style="display: none;" />
+      </div>
+    </div>
+
+    <div class="gallery-item" data-link="galerie/mirrored-labyrinths.html">
+      <div style="background-color: #e8e6e1; aspect-ratio: 3/4; width: 100%;">
+        <img src="images/mirrored-labyrinths-2.jpg" alt="Mirrored Labyrinths" style="display: none;" />
+      </div>
+    </div>
+
+    <div class="gallery-item" data-link="galerie/salt-rooms.html">
+      <div style="background-color: #e8e6e1; aspect-ratio: 3/4; width: 100%;">
+        <img src="images/salt-rooms-2.jpg" alt="Salt Rooms" style="display: none;" />
+      </div>
+    </div>
+
+    <div class="gallery-item" data-link="galerie/threshold-objects.html">
+      <div style="background-color: #e8e6e1; aspect-ratio: 3/4; width: 100%;">
+        <img src="images/threshold-objects-2.jpg" alt="Threshold Objects" style="display: none;" />
+      </div>
+    </div>
 
   </main>
 

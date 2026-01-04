@@ -172,9 +172,9 @@ button {
 .homepage-gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2px;
+  gap: 2rem;
   padding: 0;
-  background: var(--color-border);
+  background: white;
 }
 
 .gallery-item {

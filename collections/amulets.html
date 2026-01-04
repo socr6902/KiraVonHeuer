@@ -18,88 +18,85 @@
       <a href="../books.html">Books</a>
       <a href="../about.html">About</a>
     </nav>
+    <div class="header-icons">
+      <a href="https://instagram.com/kiravonheuer" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        </svg>
+      </a>
+      <a href="../contact.html" aria-label="Contact">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+      </a>
+      <a href="#" class="cart-icon" aria-label="Shopping cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="9" cy="21" r="1"/>
+          <circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        <span class="cart-count">0</span>
+      </a>
+    </div>
   </header>
 
   <main class="collection-detail">
     
-    <!-- Collection Introduction -->
-    <section class="collection-intro">
-      <div class="intro-image">
-        <img src="../images/amulet-collection-hero.jpg" alt="Amulets Collection" />
-      </div>
-      <div class="intro-text">
-        <h1>Amulets</h1>
-        <p>Small objects made to carry. Protectors, anchors, reminders. Cast in sterling silver from wax models shaped by hand, each carries marks of the making—imperfections that make them particular.</p>
-        <p>These are not jewelry in the decorative sense. They are companions. Objects to hold in moments of doubt or transition. To wear close. To keep in pockets. To gift with intention.</p>
-      </div>
+    <!-- Hero Image -->
+    <section class="collection-hero">
+      <img src="../images/amulet-collection-hero.jpg" alt="Amulets Collection" />
     </section>
 
-    <!-- Objects in Context -->
-    <section class="collection-objects">
+    <!-- Collection Title & Description -->
+    <section class="collection-intro">
+      <h1>Amulets</h1>
+      <p>Small objects made to carry. Protectors, anchors, reminders. Cast in sterling silver from wax models shaped by hand, each carries marks of the making—imperfections that make them particular.</p>
+      <p>These are not jewelry in the decorative sense. They are companions. Objects to hold in moments of doubt or transition. To wear close. To keep in pockets. To gift with intention.</p>
+    </section>
+
+    <!-- Three Products in a Row -->
+    <section class="collection-products">
       
-      <article class="object-inline">
-        <div class="object-image">
-          <img src="../images/amulet-i.jpg" alt="Amulet I" />
-        </div>
-        <div class="object-info">
-          <h3><a href="../objects/amulet-i.html">Amulet I</a></h3>
-          <p class="material">Sterling Silver</p>
-          <p class="edition">Edition of 30</p>
-          <p class="availability">Available</p>
-        </div>
+      <article class="product-card">
+        <a href="../objects/amulet-i.html">
+          <div class="product-card-image">
+            <img src="../images/amulet-i.jpg" alt="Amulet I" />
+          </div>
+          <div class="product-card-info">
+            <h3>Amulet I</h3>
+            <p class="material">Sterling Silver</p>
+            <p class="availability">Available</p>
+          </div>
+        </a>
       </article>
 
-      <article class="object-inline">
-        <div class="object-image">
-          <img src="../images/amulet-ii.jpg" alt="Amulet II" />
-        </div>
-        <div class="object-info">
-          <h3><a href="../objects/amulet-ii.html">Amulet II</a></h3>
-          <p class="material">Sterling Silver</p>
-          <p class="edition">Edition of 30</p>
-          <p class="availability">Available</p>
-        </div>
+      <article class="product-card">
+        <a href="../objects/amulet-ii.html">
+          <div class="product-card-image">
+            <img src="../images/amulet-ii.jpg" alt="Amulet II" />
+          </div>
+          <div class="product-card-info">
+            <h3>Amulet II</h3>
+            <p class="material">Sterling Silver</p>
+            <p class="availability">Available</p>
+          </div>
+        </a>
       </article>
 
-      <article class="object-inline">
-        <div class="object-image">
-          <img src="../images/amulet-iii.jpg" alt="Amulet III" />
-        </div>
-        <div class="object-info">
-          <h3><a href="../objects/amulet-iii.html">Amulet III</a></h3>
-          <p class="material">Sterling Silver, Moonstone</p>
-          <p class="edition">Edition of 20</p>
-          <p class="availability">Available</p>
-        </div>
-      </article>
-
-      <!-- Context image between objects -->
-      <figure class="context-image">
-        <img src="../images/amulets-worn.jpg" alt="Amulets in use" />
-      </figure>
-
-      <article class="object-inline">
-        <div class="object-image">
-          <img src="../images/amulet-iv.jpg" alt="Amulet IV" />
-        </div>
-        <div class="object-info">
-          <h3><a href="../objects/amulet-iv.html">Amulet IV</a></h3>
-          <p class="material">Sterling Silver, Carnelian</p>
-          <p class="edition">Edition of 15</p>
-          <p class="availability">Available</p>
-        </div>
-      </article>
-
-      <!-- Non-purchasable work included for editorial integrity -->
-      <article class="object-inline object-non-commercial">
-        <div class="object-image">
-          <img src="../images/amulet-prototype.jpg" alt="Prototype Study" />
-        </div>
-        <div class="object-info">
-          <h3>Prototype Study</h3>
-          <p class="material">Wax, Research Archive</p>
-          <p class="edition">Collection of the Atelier</p>
-        </div>
+      <article class="product-card">
+        <a href="../objects/amulet-iii.html">
+          <div class="product-card-image">
+            <img src="../images/amulet-iii.jpg" alt="Amulet III" />
+          </div>
+          <div class="product-card-info">
+            <h3>Amulet III</h3>
+            <p class="material">Sterling Silver, Moonstone</p>
+            <p class="availability">Available</p>
+          </div>
+        </a>
       </article>
 
     </section>

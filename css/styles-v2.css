@@ -9,7 +9,8 @@
 }
 
 :root {
-  --color-bg: #f8f7f4;
+  --color-bg: #ffffff;
+  --color-footer-bg: #f8f7f4;
   --color-text: #1a1a1a;
   --color-text-light: #666;
   --color-border: #d4d2cc;
@@ -874,7 +875,7 @@ button {
   border-top: 1px solid var(--color-border);
   padding: var(--spacing-lg) var(--spacing-md);
   margin-top: var(--spacing-xl);
-  background: #fff;
+  background: var(--color-footer-bg);
 }
 
 .footer-content {

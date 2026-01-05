@@ -1,0 +1,123 @@
+/* ============================================
+   GALERIE PAGE
+   ============================================ */
+
+.galerie-index {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.homepage-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 0;
+  background: white;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  cursor: pointer;
+  background: white;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item--large {
+  grid-column: span 1;
+  aspect-ratio: 3/4;
+}
+
+.gallery-item--wide {
+  grid-column: span 1;
+  aspect-ratio: 3/4;
+}
+
+.gallery-item--tall {
+  grid-row: span 1;
+  aspect-ratio: 3/4;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.gallery-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 2s ease-in-out !important;
+  will-change: transform;
+}
+
+.gallery-item:hover .gallery-image img {
+  transform: scale(1.08) !important;
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--spacing-md) var(--spacing-md) var(--spacing-md);
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 35%, rgba(0,0,0,0.25) 60%, rgba(0,0,0,0.1) 80%, transparent 100%);
+  color: white;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery-caption h3 {
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.02em;
+}
+
+.gallery-caption .category {
+  font-size: 0.875rem;
+  opacity: 0.8;
+  font-family: var(--font-sans);
+  margin-bottom: 0.125rem;
+}
+
+.gallery-caption .status {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  font-family: var(--font-sans);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 1024px) {
+  .homepage-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .galerie-index {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .homepage-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .gallery-item--large,
+  .gallery-item--wide,
+  .gallery-item--tall {
+    grid-column: span 1;
+    grid-row: span 1;
+    aspect-ratio: 3/4;
+  }
+}

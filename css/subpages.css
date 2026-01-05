@@ -1,0 +1,486 @@
+/* ============================================
+   SUBPAGES & DETAIL PAGES
+   ============================================ */
+
+/* COLLECTION DETAIL PAGE */
+
+.collection-detail {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.collection-hero {
+  margin-bottom: var(--spacing-xl);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.collection-hero img {
+  width: 100%;
+  display: block;
+  background: #e8e6e1;
+  aspect-ratio: 16/9;
+}
+
+.collection-intro {
+  max-width: 800px;
+  margin: 0 auto var(--spacing-xl);
+  text-align: center;
+}
+
+.collection-intro h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: var(--spacing-md);
+  letter-spacing: 0.01em;
+}
+
+.collection-intro p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: var(--spacing-md);
+}
+
+.collection-products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.product-card {
+  position: relative;
+  cursor: pointer;
+}
+
+.product-card a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-card-image {
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  margin-bottom: 1rem;
+  background: #e8e6e1;
+}
+
+.product-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 2s ease-in-out;
+  display: none;
+}
+
+.product-card:hover .product-card-image img {
+  transform: scale(1.08);
+}
+
+.product-card-info {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.product-card-info h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+}
+
+.product-card-info .material {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  margin-bottom: 0.25rem;
+}
+
+.product-card-info .availability {
+  font-size: 0.875rem;
+  font-family: var(--font-sans);
+  color: var(--color-text-light);
+  opacity: 0.7;
+}
+
+/* OBJECT PAGE (Primary Commerce) */
+
+.object-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.object-title {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.object-title h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.object-primary {
+  margin-bottom: var(--spacing-lg);
+}
+
+.object-image-main {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #e8e6e1;
+  aspect-ratio: 4/3;
+}
+
+.object-image-main img {
+  display: none;
+}
+
+.object-description {
+  max-width: 800px;
+  margin: 0 auto var(--spacing-xl);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.object-description p {
+  margin-bottom: var(--spacing-md);
+}
+
+.object-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+  max-width: 900px;
+  margin: 0 auto var(--spacing-xl);
+}
+
+.object-gallery figure {
+  background: #e8e6e1;
+  aspect-ratio: 1/1;
+}
+
+.object-gallery img {
+  display: none;
+}
+
+.object-info-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.object-details .material,
+.object-details .dimensions,
+.object-details .year,
+.object-details .edition {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin-bottom: 0.5rem;
+}
+
+.object-availability {
+  padding: var(--spacing-lg);
+  background: var(--color-footer-bg);
+  border: 1px solid var(--color-border);
+}
+
+.status-label {
+  font-size: 0.875rem;
+  font-family: var(--font-sans);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: var(--spacing-xs);
+}
+
+.object-price {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-md);
+  font-family: var(--font-sans);
+}
+
+.acquire-button {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--color-accent);
+  background: transparent;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: var(--font-sans);
+  transition: all 0.3s ease;
+}
+
+.acquire-button:hover {
+  background: var(--color-accent);
+  color: white;
+}
+
+.delivery-note,
+.shipping-note {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  margin-top: var(--spacing-sm);
+  font-family: var(--font-sans);
+}
+
+.object-inline {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing-lg);
+  align-items: start;
+  padding: var(--spacing-md) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.object-inline .object-image {
+  background: #e8e6e1;
+  aspect-ratio: 4/3;
+}
+
+.object-inline .object-image img {
+  display: none;
+}
+
+.object-info h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: var(--spacing-sm);
+}
+
+.object-info h3 a {
+  transition: opacity 0.3s ease;
+}
+
+.object-info h3 a:hover {
+  opacity: 0.6;
+}
+
+.object-info .material,
+.object-info .edition {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin-bottom: 0.25rem;
+}
+
+.object-info .availability {
+  font-size: 0.875rem;
+  font-family: var(--font-sans);
+  letter-spacing: 0.05em;
+  margin-top: var(--spacing-sm);
+  opacity: 0.8;
+}
+
+.context-image {
+  margin: var(--spacing-xl) 0;
+  background: #e8e6e1;
+  aspect-ratio: 3/2;
+}
+
+.context-image img {
+  display: none;
+}
+
+.object-non-commercial {
+  opacity: 0.7;
+}
+
+/* EXHIBITION/CURATORIAL/CRUSADE/BOOK DETAIL PAGES */
+
+.exhibition-detail,
+.curatorial-detail,
+.crusade-detail,
+.book-detail {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.exhibition-hero,
+.project-hero,
+.crusade-hero,
+.book-hero {
+  margin-bottom: var(--spacing-lg);
+}
+
+.exhibition-info-section h1,
+.project-info-section h1,
+.crusade-title-section h1,
+.book-info-section h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: var(--spacing-sm);
+  letter-spacing: 0.01em;
+}
+
+.exhibition-meta,
+.project-meta,
+.crusade-meta {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+}
+
+.exhibition-text,
+.project-concept,
+.crusade-essay,
+.book-description-section {
+  margin: var(--spacing-xl) 0;
+}
+
+.text-content,
+.concept-text,
+.essay-content,
+.description-text {
+  max-width: 65ch;
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.text-content p,
+.concept-text p,
+.essay-content p,
+.description-text p {
+  margin-bottom: var(--spacing-md);
+}
+
+.text-content h2,
+.text-content h3,
+.concept-text h2,
+.essay-content h2,
+.essay-content h3,
+.description-text h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: var(--spacing-lg) 0 var(--spacing-md);
+  letter-spacing: 0.01em;
+}
+
+.crusade-actions {
+  list-style: none;
+  margin: var(--spacing-md) 0;
+  padding-left: var(--spacing-md);
+}
+
+.crusade-actions li {
+  margin-bottom: var(--spacing-sm);
+  position: relative;
+  padding-left: var(--spacing-md);
+}
+
+.crusade-actions li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+}
+
+.exhibition-documentation,
+.project-documentation,
+.crusade-visuals {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--spacing-md);
+  margin: var(--spacing-xl) 0;
+}
+
+.doc-image,
+.crusade-image figure {
+  margin: 0;
+}
+
+.doc-image figcaption {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  margin-top: var(--spacing-xs);
+  font-family: var(--font-sans);
+}
+
+.exhibition-credits,
+.project-outcomes,
+.crusade-partners {
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.credits-text {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+}
+
+.collaborators-list,
+.partners-list {
+  list-style: none;
+  margin-top: var(--spacing-md);
+}
+
+.collaborators-list li {
+  margin-bottom: var(--spacing-sm);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.partners-list li {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-light);
+}
+
+.intro-image {
+  display: none;
+}
+
+.intro-text {
+  display: none;
+}
+
+.collection-objects {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .collection-products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .object-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .object-info-section {
+    grid-template-columns: 1fr;
+  }
+
+  .object-inline,
+  .collection-link {
+    grid-template-columns: 1fr;
+  }
+
+  .exhibition-documentation,
+  .project-documentation,
+  .crusade-visuals {
+    grid-template-columns: 1fr;
+  }
+
+  .exhibition-info-section h1,
+  .project-info-section h1,
+  .crusade-title-section h1,
+  .book-info-section h1 {
+    font-size: 2rem;
+  }
+}

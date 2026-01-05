@@ -740,37 +740,10 @@ button {
   font-style: italic;
 }
 
-/* ============================================
-   CRUSADES INTRO
-   ============================================ */
-
-.crusades-intro {
-  max-width: 65ch;
-  margin: 0 auto var(--spacing-xl);
-  padding: var(--spacing-lg) 0;
-  border-bottom: 1px solid var(--color-border);
-}
-
-.crusades-intro .intro-text p {
-  font-size: 1.125rem;
-  line-height: 1.7;
-}
 
 /* ============================================
    BOOKS
    ============================================ */
-
-.books-intro {
-  max-width: 65ch;
-  margin: 0 auto var(--spacing-xl);
-  padding: var(--spacing-lg) 0;
-  border-bottom: 1px solid var(--color-border);
-}
-
-.books-intro p {
-  font-size: 1.125rem;
-  line-height: 1.7;
-}
 
 .book-cover {
   max-width: 500px;

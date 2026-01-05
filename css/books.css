@@ -1,0 +1,132 @@
+/* ============================================
+   BOOKS PAGE
+   ============================================ */
+
+.books-index {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.book-statement {
+  max-width: 100%;
+  margin: 0 auto var(--spacing-xl);
+  padding: var(--spacing-lg) 0;
+  border-bottom: none;
+  position: relative;
+}
+
+.book-statement::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.statement-text p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  font-style: italic;
+  text-align: center;
+}
+
+.book-entry {
+  margin-bottom: var(--spacing-xl);
+}
+
+.book-link {
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.book-link:hover {
+  opacity: 0.85;
+}
+
+.book-image {
+  margin-bottom: var(--spacing-md);
+  overflow: hidden;
+}
+
+.book-image img {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.book-link:hover .book-image img {
+  transform: scale(1.02);
+}
+
+.book-info h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: var(--spacing-xs);
+  letter-spacing: 0.01em;
+}
+
+.book-description {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  margin-bottom: 0.25rem;
+}
+
+.book-status {
+  font-size: 0.875rem;
+  font-family: var(--font-sans);
+  opacity: 0.6;
+}
+
+.book-cover {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.book-subtitle {
+  font-size: 1.125rem;
+  color: var(--color-text-light);
+  font-style: italic;
+  margin-bottom: var(--spacing-md);
+}
+
+.book-specs {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+  font-family: var(--font-sans);
+}
+
+.book-spreads {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+  margin: var(--spacing-xl) 0;
+}
+
+.book-availability {
+  max-width: 400px;
+  margin: var(--spacing-xl) auto;
+}
+
+.availability-content {
+  padding: var(--spacing-lg);
+  background: #fff;
+  border: 1px solid var(--color-border);
+}
+
+.book-price {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-md);
+  font-family: var(--font-sans);
+}
+
+@media (max-width: 768px) {
+  .books-index {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .book-info h2 {
+    font-size: 1.5rem;
+  }
+}

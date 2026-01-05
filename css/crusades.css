@@ -1,0 +1,115 @@
+/* ============================================
+   CRUSADES PAGE
+   ============================================ */
+
+.crusades-index {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.crusade-statement {
+  max-width: 100%;
+  margin: 0 auto var(--spacing-xl);
+  padding: var(--spacing-lg) 0;
+  border-bottom: none;
+  position: relative;
+}
+
+.crusade-statement::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.statement-text p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  font-style: italic;
+  text-align: center;
+}
+
+.crusade-entry {
+  margin-bottom: var(--spacing-xl);
+}
+
+.crusade-link {
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.crusade-link:hover {
+  opacity: 0.85;
+}
+
+.crusade-image {
+  margin-bottom: var(--spacing-md);
+  overflow: hidden;
+}
+
+.crusade-image img {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.crusade-link:hover .crusade-image img {
+  transform: scale(1.02);
+}
+
+.crusade-info h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: var(--spacing-xs);
+  letter-spacing: 0.01em;
+}
+
+.crusade-theme {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  margin-bottom: 0.25rem;
+}
+
+.crusade-status {
+  font-size: 0.875rem;
+  font-family: var(--font-sans);
+  opacity: 0.6;
+}
+
+/* Crusades intro statement */
+.crusades-intro {
+  max-width: 100%;
+  margin: 0 auto var(--spacing-xl);
+  padding: var(--spacing-lg) 0;
+  border-bottom: none;
+  position: relative;
+}
+
+.crusades-intro::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.crusades-intro .intro-text p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  font-style: italic;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .crusades-index {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .crusade-info h2 {
+    font-size: 1.5rem;
+  }
+}

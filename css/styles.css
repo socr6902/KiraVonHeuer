@@ -761,7 +761,8 @@ button {
 .galerie-index,
 .curatorial-index,
 .crusades-index,
-.books-index {
+.books-index,
+.about-index {
   max-width: 1400px;
   margin: 0 auto;
   padding: var(--spacing-xl) var(--spacing-md);
@@ -849,6 +850,64 @@ button {
   max-width: 1200px;
   margin: 0 auto;
   padding: var(--spacing-lg) var(--spacing-md);
+
+/* ============================================
+   ABOUT PAGE
+   ============================================ */
+
+.about-hero {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.about-divider img {
+  width: 12px; /* tiny wave */
+  display: block;
+  margin: var(--spacing-sm) auto 0;
+  opacity: 0.6;
+}
+
+.about-section {
+  max-width: 60ch;
+  margin: 0 auto var(--spacing-xl);
+  text-align: center;
+}
+
+.about-subheading {
+  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  letter-spacing: 0.02em;
+  margin-bottom: var(--spacing-sm);
+  position: relative;
+}
+
+.about-subheading::before {
+  content: '›';
+  margin-right: 0.5rem;
+  opacity: 0.6;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-sm) 0 0;
+}
+
+.about-list li {
+  font-style: italic;
+  line-height: 1.9;
+}
+
+/* Paragraph spacing for statement and about sections */
+.statement-text p {
+  margin: 0 0 var(--spacing-md);
+}
+.statement-text p:last-child {
+  margin-bottom: 0;
+}
+.about-section p {
+  margin: 0 0 var(--spacing-sm);
+}
 }
 
 .exhibition-hero,
@@ -1038,7 +1097,7 @@ button {
   border-bottom: 1px solid var(--color-border);
 }
 
-.books-intro p {
+.books-intro .intro-text p {
   font-size: 1.125rem;
   line-height: 1.7;
 }

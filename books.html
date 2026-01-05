@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <title>Books — Kira Allegra Heuer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/books.css" />
 </head>
 <body>
 
@@ -18,24 +19,48 @@
       <a href="books.html" class="active">Books</a>
       <a href="about.html">About</a>
     </nav>
+    <div class="header-icons">
+      <a href="https://instagram.com/kiravonheuer" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        </svg>
+      </a>
+      <a href="contact.html" aria-label="Contact">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+      </a>
+      <a href="#" class="cart-icon" aria-label="Shopping cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="9" cy="21" r="1"/>
+          <circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        <span class="cart-count">0</span>
+      </a>
+    </div>
   </header>
 
   <main class="books-index">
     
-    <!-- Books Introduction -->
-    <section class="books-intro">
-      <p>Slow objects. Publications made with the same attention as the physical work—typography, paper, binding all considered. Some document past projects. Others stand alone as investigations.</p>
+    <section class="book-statement">
+      <div class="statement-text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      </div>
     </section>
 
     <!-- Book Entries -->
     <article class="book-entry">
       <a href="books/tides.html" class="book-link">
-        <div class="book-image">
-          <img src="images/book-tides.jpg" alt="Tides" loading="lazy" />
+        <div class="book-image" style="background-color: #e8e6e1; aspect-ratio: 16/9;">
+          <img src="images/book-tides.jpg" alt="Tides" loading="lazy" style="display: none;" />
         </div>
         <div class="book-info">
-          <h2>Tides</h2>
-          <p class="book-description">A visual meditation on tidal patterns and making rhythms</p>
+          <h2>Book I</h2>
+          <p class="book-description">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
           <p class="book-status">Coming Soon — Spring 2026</p>
         </div>
       </a>
@@ -43,21 +68,21 @@
 
     <article class="book-entry">
       <a href="books/water-chapels.html" class="book-link">
-        <div class="book-image">
-          <img src="images/book-water-chapels.jpg" alt="Water Chapels" loading="lazy" />
+        <div class="book-image" style="background-color: #e8e6e1; aspect-ratio: 16/9;">
+          <img src="images/book-water-chapels.jpg" alt="Water Chapels" loading="lazy" style="display: none;" />
         </div>
         <div class="book-info">
-          <h2>Water Chapels</h2>
-          <p class="book-description">Exhibition documentation with essays by Cathy Lane and Marina Warner</p>
+          <h2>Book II</h2>
+          <p class="book-description">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
           <p class="book-status">Available</p>
         </div>
       </a>
     </article>
 
-    <article class="book-entry">
+    <!-- <article class="book-entry">
       <a href="books/material-intelligence.html" class="book-link">
-        <div class="book-image">
-          <img src="images/book-material-intelligence.jpg" alt="Material Intelligence" loading="lazy" />
+        <div class="book-image" style="background-color: #e8e6e1; aspect-ratio: 16/9;">
+          <img src="images/book-material-intelligence.jpg" alt="Material Intelligence" loading="lazy" style="display: none;" />
         </div>
         <div class="book-info">
           <h2>Material Intelligence</h2>
@@ -69,8 +94,8 @@
 
     <article class="book-entry">
       <a href="books/amulet-studies.html" class="book-link">
-        <div class="book-image">
-          <img src="images/book-amulet-studies.jpg" alt="Amulet Studies" loading="lazy" />
+        <div class="book-image" style="background-color: #e8e6e1; aspect-ratio: 16/9;">
+          <img src="images/book-amulet-studies.jpg" alt="Amulet Studies" loading="lazy" style="display: none;" />
         </div>
         <div class="book-info">
           <h2>Amulet Studies</h2>
@@ -78,7 +103,7 @@
           <p class="book-status">Out of Print</p>
         </div>
       </a>
-    </article>
+    </article> -->
 
   </main>
 

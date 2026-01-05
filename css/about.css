@@ -10,14 +10,15 @@
 
 .about-hero {
   text-align: center;
-  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-lg);
 }
 
 .about-divider img {
-  width: 10px !important;
+  width: 25px !important;
   display: block;
   margin: var(--spacing-sm) auto 0;
   opacity: 0.6;
+  padding-top: var(--spacing-lg);
 }
 
 .about-section {
@@ -59,7 +60,6 @@
 .about-index .curatorial-statement {
   max-width: 100%;
   margin: 0 auto var(--spacing-xl);
-  padding: var(--spacing-lg) 0;
   border-bottom: none;
   position: relative;
 }
@@ -71,7 +71,6 @@
   left: 50%;
   transform: translateX(-50%);
   width: 50%;
-  border-bottom: 1px solid var(--color-border);
 }
 
 .about-index .statement-text p {

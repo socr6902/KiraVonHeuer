@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Kira Allegra Heuer — Version 2</title>
+  <title>Kira Allegra Heuer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/styles-v2.css?v=<?php echo time(); ?>" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/galerie.css" />
 </head>
 <body>
 
@@ -43,90 +44,111 @@
     </div>
   </header>
 
-  <!-- VERSION 2: 4-column with spacing, text below images -->
-  <main class="homepage-gallery homepage-gallery-v2">
+  <main class="homepage-gallery">
+    <!-- 4-column grid — mix of objects, installations, editorial shots -->
     
-    <article class="gallery-item gallery-item-v2" data-link="crusades/ocean-letters.html">
+    <article class="gallery-item" data-link="collections/carved-forms.html">
       <div class="gallery-image">
-        <img src="images/ocean-chairs.jpg" alt="Love Letters To The Ocean" loading="lazy" />
+        <img src="images/ocean-chairs.jpg" alt="Carved Wood Screen" loading="lazy" />
       </div>
-      <div class="gallery-info-v2">
+      <div class="gallery-caption">
         <h3>Love Letters To The Ocean</h3>
         <p class="category">Crusades</p>
+        <p class="status">Oahu, Hawaii</p>
       </div>
     </article>
 
-    <article class="gallery-item gallery-item-v2" data-link="galerie.html">
+    <article class="gallery-item" data-link="collections/carry-objects.html">
       <div class="gallery-image">
         <img src="images/field-notes.jpg" alt="Field Notes" loading="lazy" />
       </div>
-      <div class="gallery-info-v2">
+      <div class="gallery-caption">
         <h3>Field Notes</h3>
         <p class="category">Popup</p>
+        <p class="status">Cairo, Egypt</p>
       </div>
     </article>
 
-    <article class="gallery-item gallery-item-v2" data-link="galerie.html">
+    <article class="gallery-item" data-link="collections/vessels.html">
       <div class="gallery-image">
-        <img src="images/exhibit.jpg" alt="Exhibit I" loading="lazy" />
+        <img src="images/exhibit.jpg" alt="Ceramic Vessels" loading="lazy" />
       </div>
-      <div class="gallery-info-v2">
+      <div class="gallery-caption">
         <h3>Exhibit I</h3>
         <p class="category">Galerie</p>
+        <p class="status">Paris, France</p>
       </div>
     </article>
 
-    <article class="gallery-item gallery-item-v2" data-link="collections.html">
+    <article class="gallery-item" data-link="collections/natural-objects.html">
+      <div class="gallery-image">
+        <img src="images/oyster-pearl.jpg" alt="Pearl in Oyster Shell" loading="lazy" />
+      </div>
+      <div class="gallery-caption">
+        <h3>Natural Forms</h3>
+        <p class="category">Collection</p>
+        <p class="status">Available</p>
+      </div>
+    </article>
+
+    <article class="gallery-item" data-link="collections/brooches.html">
+      <div class="gallery-image">
+        <img src="images/silver-brooch.jpg" alt="Silver Brooch" loading="lazy" />
+      </div>
+      <div class="gallery-caption">
+        <h3>Amulets</h3>
+        <p class="category">Collection</p>
+        <p class="status">Available</p>
+      </div>
+    </article>
+
+    
+
+    <article class="gallery-item" data-link="collections/amulets.html">
       <div class="gallery-image">
         <img src="images/metal-vessels.jpg" alt="Vessels" loading="lazy" />
       </div>
-      <div class="gallery-info-v2">
+      <div class="gallery-caption">
         <h3>Vessels</h3>
         <p class="category">Collection</p>
+        <p class="status">Available</p>
       </div>
     </article>
-   
-    <article class="gallery-item gallery-item-v2" data-link="collections.html">
+
+
+    <article class="gallery-item" data-link="collections/carried-objects.html">
       <div class="gallery-image">
-        <img src="images/oyster-pearl.jpg" alt="Natural Forms" loading="lazy" />
+        <img src="images/porcelain-purse.jpg" alt="Porcelain Purse" loading="lazy" />
       </div>
-      <div class="gallery-info-v2">
-        <h3>Natural Forms</h3>
+      <div class="gallery-caption">
+        <h3>Carried Objects</h3>
         <p class="category">Collection</p>
+        <p class="status">Available</p>
       </div>
     </article>
 
-    <article class="gallery-item gallery-item-v2" data-link="collections/amulets.html">
-      <div class="gallery-image">
-        <img src="images/silver-brooch.jpg" alt="Amulets" loading="lazy" />
-      </div>
-      <div class="gallery-info-v2">
-        <h3>Amulets</h3>
-        <p class="category">Collection</p>
-      </div>
-    </article>
 
-     
-
-    <article class="gallery-item gallery-item-v2" data-link="collections.html">
+    <article class="gallery-item" data-link="collections/plates.html">
       <div class="gallery-image">
-        <img src="images/prints.jpg" alt="Prints" loading="lazy" />
+        <img src="images/pewter-plate.jpg" alt="Pewter Plate" loading="lazy" />
       </div>
-      <div class="gallery-info-v2">
-        <h3>Prints</h3>
-        <p class="category">Collection</p>
-      </div>
-    </article>
-
-    <article class="gallery-item gallery-item-v2" data-link="collections.html">
-      <div class="gallery-image">
-        <img src="images/pewter-plate.jpg" alt="Wave Trays" loading="lazy" />
-      </div>
-      <div class="gallery-info-v2">
+      <div class="gallery-caption">
         <h3>Wave Trays</h3>
         <p class="category">Collection</p>
+        <p class="status">Available</p>
       </div>
     </article>
+
+    <!-- <article class="gallery-item" data-link="collections/light-holders.html">
+      <div class="gallery-image">
+        <img src="images/wall-sconse.jpg" alt="Alabaster Wall Sconce" loading="lazy" />
+      </div>
+      <div class="gallery-caption">
+        <h3>Wall Sconce</h3>
+        <p class="category">Collection</p>
+        <p class="status">Available</p>
+      </div>
+    </article> -->
 
   </main>
 

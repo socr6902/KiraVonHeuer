@@ -171,6 +171,50 @@
   }
 
   // ==========================================
+  // MOBILE MENU TOGGLE
+  // ==========================================
+
+  function initMobileMenu() {
+    const header = document.querySelector('.home-header');
+    if (!header) return;
+
+    const toggle = header.querySelector('.mobile-toggle');
+    const mobileMenu = header.querySelector('.mobile-menu');
+
+    // Toggle menu open/close
+    if (toggle) {
+      toggle.addEventListener('click', function(e) {
+        const isOpen = header.classList.toggle('menu-open');
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        if (mobileMenu) mobileMenu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+      });
+    }
+
+    // Close menu when clicking a link inside
+    if (mobileMenu) {
+      mobileMenu.addEventListener('click', function(e) {
+        const target = e.target;
+        if (target && target.tagName === 'A') {
+          header.classList.remove('menu-open');
+          if (toggle) toggle.setAttribute('aria-expanded', 'false');
+          mobileMenu.setAttribute('aria-hidden', 'true');
+        }
+      });
+    }
+
+    // Close when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!header.classList.contains('menu-open')) return;
+      const path = e.composedPath ? e.composedPath() : (e.path || []);
+      if (!path.includes(header)) {
+        header.classList.remove('menu-open');
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
+        if (mobileMenu) mobileMenu.setAttribute('aria-hidden', 'true');
+      }
+    });
+  }
+
+  // ==========================================
   // PREVENT LAYOUT SHIFT FOR IMAGES
   // ==========================================
   
@@ -214,6 +258,7 @@
     initAcquireButtons();
     initScrollAnimations();
     initNavigationHighlight();
+  initMobileMenu();
     preventLayoutShift();
 
     // Add loaded class to body for CSS hooks

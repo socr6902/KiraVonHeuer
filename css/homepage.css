@@ -122,11 +122,11 @@
   .header-desktop{display:none !important}
   /* Also hide any legacy .header-inner to be safe */
   .home-header .header-inner{display:none !important}
-  .header-mobile{display:block !important;position:relative;z-index:95}
+  .header-mobile{display:flex !important;align-items:center;justify-content:center;position:relative;z-index:95;min-height:66px}
   /* position hamburger symmetrically with the cart and give matching touch area */
   .header-mobile .mobile-toggle{display:block;position:absolute;left:24px;top:50%;transform:translateY(-50%);z-index:95;padding:12px}
-  /* mobile brand: match desktop size (50px) and given an optical nudge for centering */
-  .header-mobile .brand.mobile-brand{font-size:50px;position:static;transform:translateY(0);z-index:90;letter-spacing:-0.02em;line-height:1;display:block;text-align:center}
+  /* mobile brand: match desktop size (50px) and center in the flex container */
+  .header-mobile .brand.mobile-brand{font-size:50px;position:relative;transform:translateY(12%);z-index:90;letter-spacing:-0.02em;line-height:1;display:block;text-align:center;margin:0}
   .header-mobile .brand.mobile-brand a{display:block;line-height:1}
   /* give the collapsed mobile menu a bit more breathing room and ensure specificity */
   /* ensure mobile menu container matches header gutter for consistent visuals */

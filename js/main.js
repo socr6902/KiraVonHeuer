@@ -241,6 +241,68 @@
   }
 
   // ==========================================
+  // CAROUSEL FUNCTIONALITY
+  // ==========================================
+  
+  function initCarousel() {
+    const track = document.querySelector('.carousel-track');
+    const items = document.querySelectorAll('.carousel-item');
+    const prevButton = document.querySelector('.carousel-prev');
+    const nextButton = document.querySelector('.carousel-next');
+    const counter = document.querySelector('.carousel-counter');
+    
+    if (!track || !items.length) return;
+    
+    let currentIndex = 0;
+    const itemsPerView = 4;
+    const maxIndex = Math.max(0, items.length - itemsPerView);
+    
+    function updateCarousel() {
+      const itemWidth = items[0].offsetWidth;
+      const gap = 20;
+      const offset = currentIndex * (itemWidth + gap);
+      track.style.transform = `translateX(-${offset}px)`;
+      
+      // Update counter
+      if (counter) {
+        counter.textContent = `${currentIndex + 1}/${items.length}`;
+      }
+      
+      // Update button states
+      if (prevButton) {
+        prevButton.disabled = currentIndex === 0;
+      }
+      if (nextButton) {
+        nextButton.disabled = currentIndex >= maxIndex;
+      }
+    }
+    
+    if (prevButton) {
+      prevButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateCarousel();
+        }
+      });
+    }
+    
+    if (nextButton) {
+      nextButton.addEventListener('click', () => {
+        if (currentIndex < maxIndex) {
+          currentIndex++;
+          updateCarousel();
+        }
+      });
+    }
+    
+    // Initialize
+    updateCarousel();
+    
+    // Update on window resize
+    window.addEventListener('resize', updateCarousel);
+  }
+
+  // ==========================================
   // INITIALIZE ALL FUNCTIONALITY
   // ==========================================
   
@@ -260,6 +322,7 @@
     initNavigationHighlight();
   initMobileMenu();
     preventLayoutShift();
+    initCarousel();
 
     // Add loaded class to body for CSS hooks
     document.body.classList.add('js-loaded');

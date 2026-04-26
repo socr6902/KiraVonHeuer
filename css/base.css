@@ -2,6 +2,14 @@
    GLOBAL RULES & RESET
    ============================================ */
 
+@font-face {
+  font-family: 'TAYAmaya';
+  src: url('../TAYAmaya.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -70,9 +78,10 @@ button {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   /* navbar/brand should use condensed bold look */
-  font-family: 'DIN Condensed', 'Arial Narrow', var(--font-sans);
-  font-weight: 700;
+  font-family: 'TAYAmaya', 'DIN Condensed', 'Arial Narrow', var(--font-sans);
+  font-weight: 300;
   margin-bottom: var(--spacing-sm);
+  opacity: 0.95;
 }
 
 .brand a {
@@ -95,9 +104,9 @@ button {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   /* condensed bold for nav links */
-  font-family: 'DIN Condensed', 'Arial Narrow', var(--font-sans);
+  font-family: 'TAYAmaya', 'DIN Condensed', 'Arial Narrow', var(--font-sans);
   font-weight: 700;
-  opacity: 0.7;
+  opacity: 0.85;
   transition: opacity 0.3s ease;
   position: relative;
 }

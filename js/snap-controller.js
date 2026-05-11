@@ -56,7 +56,7 @@
 
   function getSnapSections() {
     var nodes = Array.from(document.querySelectorAll(
-      '.hero, #sticky-panels > .sticky-panel, main.home-root, footer.site-footer'
+      '.hero, #sticky-panels > .sticky-panel, .loons-footer-container'
     ));
 
     return nodes.filter(isVisible);
@@ -161,7 +161,16 @@
     if (shouldIgnoreEventTarget(event.target)) return;
     if (!targets.length) return;
 
-    // We need preventDefault so natural wheel movement doesn't bypass the resistance.
+    // Allow natural scrolling when the user is at the first/last snap target
+    // and keeps scrolling outward so lower/upper content remains reachable.
+    var current = getCurrentTargetIndex();
+    var atFirst = current <= 0;
+    var atLast = current >= targets.length - 1;
+    if ((atFirst && event.deltaY < 0) || (atLast && event.deltaY > 0)) {
+      return;
+    }
+
+    // Keep sections snapped while navigating inside the snap range.
     event.preventDefault();
 
     if (isAnimating) return;

@@ -403,6 +403,51 @@
 .subscribe-form input[type="email"]{padding:12px 14px;border:1px solid #ccc;min-width:240px}
 .subscribe-form button{padding:12px 16px;border:1px solid #000;background:#000;color:#fff}
 
+/* Bottom homepage banner (above footer) */
+.loons-footer-container{
+  position:relative;
+  width:100vw;
+  left:50%;
+  margin-left:-50vw;
+  margin-right:-50vw;
+  margin-top:40px;
+  height:calc(100vh - var(--header-offset, 88px));
+  min-height:520px;
+  display:grid;
+  grid-template-rows:17fr 3fr;
+  overflow:hidden;
+  background:var(--color-footer-bg);
+}
+
+.bottom-banner{
+  position:relative;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  background:#f3f3f3;
+}
+
+.bottom-banner img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 28%;
+}
+
+.loons-footer-container .site-footer{
+  margin-top:0;
+  height:100%;
+  padding:clamp(20px, 2.2vw, 38px) clamp(28px, 4vw, 56px);
+  display:flex;
+  align-items:flex-start;
+  background:var(--color-footer-bg);
+}
+
+.loons-footer-container .footer-content{
+  width:100%;
+}
+
 /* responsive */
 @media (max-width:1140px){
   .product-grid{grid-template-columns:repeat(3,1fr)}

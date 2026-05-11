@@ -78,7 +78,8 @@
   </section>
 
   <!-- Creative Studio Section -->
-  <section class="creative-studio">
+  <div class="sticky-scroll" id="sticky-panels">
+  <section class="creative-studio sticky-panel">
     <h2 class="studio-heading">CREATIVE STUDIO</h2>
     <p class="studio-byline">By Kira von Heuer</p>
     
@@ -96,8 +97,7 @@
   </section>
 
 
-
-  <section class="dual-image-section">
+  <section class="dual-image-section sticky-panel">
     <div class="dual-grid">
       <article class="dual-card">
         <a href="#">
@@ -121,7 +121,7 @@
     </div>
   </section>
 
-  <section class="about-square-section">
+  <section class="about-square-section sticky-panel">
     <div class="about-square-wrapper">
       <div class="about-square">
         <h2 class="about-square-title">ABOUT</h2>
@@ -136,7 +136,7 @@
     </div>
   </section>
 
-  <section class="carousel-section">
+  <section class="carousel-section sticky-panel">
     <div class="carousel-container">
       <button class="carousel-nav carousel-prev" aria-label="Previous">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -185,7 +185,10 @@
     </div>
     
     <div class="carousel-counter">1/4</div>
+
   </section>
+
+  </div>
 
   <main class="home-root">
 
@@ -218,5 +221,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/snap-controller.js"></script>
 </body>
 </html>

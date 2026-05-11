@@ -74,7 +74,7 @@ button {
 }
 
 .brand {
-  font-size: 2.5rem;
+  font-size: 3rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   /* navbar/brand should use condensed bold look */
@@ -100,7 +100,7 @@ button {
 }
 
 .nav a {
-  font-size: 0.95rem;
+  font-size: 1.15rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   /* condensed bold for nav links */

@@ -226,8 +226,27 @@ button {
     --spacing-xl: 4rem;
   }
 
+  body {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
   .site-header {
-    padding: 1rem;
+    padding: 0.95rem 0.9rem;
+  }
+
+  .brand {
+    font-size: 2.1rem;
+    letter-spacing: 0.12em;
+  }
+
+  .nav {
+    gap: 1rem;
+  }
+
+  .nav a {
+    font-size: 0.92rem;
+    letter-spacing: 0.06em;
   }
 
   .header-icons {
@@ -238,5 +257,37 @@ button {
   .header-icons svg {
     width: 18px;
     height: 18px;
+  }
+
+  .site-footer {
+    padding: 2.2rem 1.1rem;
+    margin-top: 3.2rem;
+  }
+
+  .footer-content {
+    gap: 1.4rem;
+  }
+
+  .footer-section a {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand {
+    font-size: 1.85rem;
+    letter-spacing: 0.1em;
+  }
+
+  .nav {
+    gap: 0.75rem;
+  }
+
+  .nav a {
+    font-size: 0.82rem;
+  }
+
+  .site-footer {
+    padding: 1.9rem 0.9rem;
   }
 }

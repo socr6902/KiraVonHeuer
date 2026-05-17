@@ -1245,8 +1245,27 @@ button {
     --spacing-xl: 4rem;
   }
 
+  body {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
   .site-header {
-    padding: 1rem;
+    padding: 0.95rem 0.9rem;
+  }
+
+  .brand {
+    font-size: 1rem;
+    letter-spacing: 0.16em;
+  }
+
+  .nav {
+    gap: 0.8rem;
+  }
+
+  .nav a {
+    font-size: 0.78rem;
+    letter-spacing: 0.045em;
   }
 
   .header-icons {
@@ -1290,12 +1309,56 @@ button {
   .project-info h2,
   .crusade-info h2,
   .book-info h2 {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
+  }
+
+  .collection-concept,
+  .exhibition-concept,
+  .project-concept,
+  .crusade-description,
+  .book-description {
+    font-size: 1rem;
+  }
+
+  .object-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .site-footer {
+    padding: 2.2rem 1rem;
+    margin-top: 3.2rem;
+  }
+
+  .footer-content {
+    gap: 1.4rem;
+  }
+
+  .footer-section a {
+    font-size: 0.8rem;
   }
 
   .exhibition-documentation,
   .project-documentation,
   .crusade-visuals {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand {
+    font-size: 0.92rem;
+    letter-spacing: 0.13em;
+  }
+
+  .nav {
+    gap: 0.6rem;
+  }
+
+  .nav a {
+    font-size: 0.72rem;
+  }
+
+  .site-footer {
+    padding: 1.9rem 0.85rem;
   }
 }

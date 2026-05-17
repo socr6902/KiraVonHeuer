@@ -454,33 +454,66 @@
   .product-card img{height:260px}
 }
 @media (max-width:1140px){
-  .hero{height:50vh}
+  .hero{min-height:58vh;height:auto}
   .product-grid{grid-template-columns:repeat(2,1fr)}
   .product-card img{height:220px}
   .hero-title{font-size:28px}
   /* Responsive header: hide desktop header and show mobile header */
-  .home-header{padding:20px 20px}
-  .site-header.home-header{padding:20px 36px !important; min-height:72px}
-  .site-header.home-header{margin-bottom:32px}
+  .home-header{padding:16px 18px}
+  .site-header.home-header{padding:16px 24px !important; min-height:68px}
+  .site-header.home-header{margin-bottom:24px}
   /* Hide the desktop header completely when mobile header is active */
   .header-desktop{display:none !important}
   /* Also hide any legacy .header-inner to be safe */
   .home-header .header-inner{display:none !important}
-  .header-mobile{display:flex !important;align-items:center;justify-content:center;position:relative;z-index:95;min-height:66px}
+  .header-mobile{display:flex !important;align-items:center;justify-content:center;position:relative;z-index:95;min-height:60px}
   /* position hamburger symmetrically with the cart and give matching touch area */
-  .header-mobile .mobile-toggle{display:block;position:absolute;left:24px;top:50%;transform:translateY(-50%);z-index:95;padding:12px}
+  .header-mobile .mobile-toggle{display:block;position:absolute;left:16px;top:50%;transform:translateY(-50%);z-index:95;padding:10px}
   /* mobile brand: match desktop size (50px) and center in the flex container */
-  .header-mobile .brand.mobile-brand{font-size:50px;position:relative;transform:translateY(12%);z-index:90;letter-spacing:-0.02em;line-height:1;display:block;text-align:center;margin:0}
+  .header-mobile .brand.mobile-brand{font-size:40px;position:relative;transform:translateY(6%);z-index:90;letter-spacing:-0.02em;line-height:1;display:block;text-align:center;margin:0}
   .header-mobile .brand.mobile-brand a{display:block;line-height:1}
   /* give the collapsed mobile menu a bit more breathing room and ensure specificity */
   /* ensure mobile menu container matches header gutter for consistent visuals */
   /* slightly increase mobile menu padding for more breathing room */
-  .site-header.home-header .mobile-menu{padding:36px 48px;top:calc(100% + 12px)}
-  .site-header.home-header .mobile-menu a{padding:22px 0;font-size:17px}
+  .site-header.home-header .mobile-menu{padding:24px 26px;top:calc(100% + 8px)}
+  .site-header.home-header .mobile-menu a{padding:14px 0;font-size:14px}
 }
+
+@media (max-width:768px){
+  .hero{margin-bottom:42px}
+  .hero-overlay{padding:14px}
+  .hero-center-img{width:min(520px,84vw);height:auto;margin-bottom:8px;border:2px solid #000}
+  .hero-pin{width:min(170px,34vw)}
+
+  .creative-studio{padding:44px 20px}
+  .studio-heading{font-size:46px}
+  .studio-byline{font-size:13px;margin:0 0 28px}
+  .studio-text{gap:18px}
+  .studio-para{font-size:13px;line-height:1.65}
+  .studio-para:nth-child(1),
+  .studio-para:nth-child(2),
+  .studio-para:nth-child(3),
+  .studio-para:nth-child(4),
+  .studio-para:nth-child(5){max-width:100%}
+
+  .dual-image-section{margin:44px 0;padding:0 18px}
+  .dual-grid{grid-template-columns:1fr;gap:22px}
+  .dual-card img{height:min(62vh,460px)}
+  .image-caption{margin:12px auto 8px;max-width:92%}
+  .image-caption .caption-title{font-size:13px}
+  .image-caption .caption-sub{font-size:10px}
+
+  .loons-footer-container{margin-top:22px;min-height:360px}
+  .loons-footer-container .site-footer{padding:14px 16px}
+  .loons-footer-container .footer-content{grid-template-columns:1fr 1fr;gap:18px}
+}
+
 @media (max-width:420px){
   .product-grid{grid-template-columns:1fr}
-  .hero{min-height:340px}
-  .hero-center-img{width:min(360px,80vw);height:auto}
+  .hero{min-height:320px}
+  .hero-center-img{width:min(360px,86vw);height:auto}
+  .hero-pin{width:min(142px,36vw)}
+  .header-mobile .brand.mobile-brand{font-size:34px}
+  .site-header.home-header .mobile-menu{padding:20px 18px}
   .hero-title{font-size:22px}
 }

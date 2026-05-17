@@ -9,10 +9,45 @@
 /* Start from current homepage look, then override below */
 @import url('./homepage.css?v=20260208-24');
 
-/*
-  Add your V2 navbar/content layout styles here.
-  Example:
+/* V2: slightly smaller hero image */
+:root {
+  --v2-hero-width: min(560px, 56vmin);
+  --v2-hero-height: min(660px, 64vmin);
+}
 
-  .site-header.home-header { ... }
-  .hero { ... }
-*/
+.hero-center-img {
+  width: var(--v2-hero-width);
+  height: var(--v2-hero-height);
+  border: 0;
+  margin-bottom: 0;
+}
+
+.hero-side-img {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  right: calc(100% + clamp(14px, 1.8vw, 28px));
+  width: calc(var(--v2-hero-width) * 0.5);
+  height: calc(var(--v2-hero-height) * 0.5);
+  object-fit: cover;
+  border: 0;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --v2-hero-width: min(430px, 78vw);
+    --v2-hero-height: min(510px, 92vw);
+  }
+
+  .hero-center-img {
+    width: var(--v2-hero-width);
+    height: var(--v2-hero-height);
+  }
+
+  .hero-side-img {
+    width: calc(var(--v2-hero-width) * 0.5);
+    height: calc(var(--v2-hero-height) * 0.5);
+    right: calc(100% + 10px);
+  }
+}

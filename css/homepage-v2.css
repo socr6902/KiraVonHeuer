@@ -149,8 +149,8 @@
   top: auto;
   bottom: 0;
   right: calc(100% + clamp(14px, 1.8vw, 28px));
-  width: calc(var(--v2-hero-width) * 0.5);
-  height: calc(var(--v2-hero-height) * 0.5);
+  width: calc(var(--v2-hero-width) * 0.6667);
+  height: calc(var(--v2-hero-height) * 0.6667);
   object-fit: cover;
   border: 0;
   display: block;
@@ -168,8 +168,8 @@
   }
 
   .hero-side-img {
-    width: calc(var(--v2-hero-width) * 0.5);
-    height: calc(var(--v2-hero-height) * 0.5);
+    width: calc(var(--v2-hero-width) * 0.6667);
+    height: calc(var(--v2-hero-height) * 0.6667);
     right: calc(100% + 10px);
   }
 }

@@ -35,25 +35,28 @@
   .v2-nav {
     width: 100%;
     display: grid;
-    grid-template-columns: 1.35fr auto auto 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
     align-items: center;
     gap: clamp(24px, 3vw, 54px);
     padding: clamp(14px, 1.5vw, 22px) clamp(24px, 3vw, 54px);
     font-family: 'Gambetta', 'Times New Roman', 'Iowan Old Style', serif;
     font-weight: 500;
+    position: relative;
   }
 
   .v2-brand {
     margin: 0;
     line-height: 1;
-    justify-self: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
   }
 
   .v2-shop {
     margin: 0;
     line-height: 1;
-    justify-self: start;
-    margin-left: clamp(16px, 1.6vw, 28px);
+    justify-self: center;
   }
 
   .v2-shop a,
@@ -95,10 +98,18 @@
   }
 
   .v2-nav-left {
+    grid-column: 1;
     justify-self: start;
   }
 
+  .v2-shop {
+    grid-column: 2;
+    justify-self: center;
+    margin-left: 0;
+  }
+
   .v2-nav-right {
+    grid-column: 3;
     justify-self: end;
   }
 
@@ -126,9 +137,52 @@
 
 @media (min-width: 1141px) and (max-width: 1460px) {
   .v2-nav {
-    grid-template-columns: 1.2fr auto auto 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
     gap: clamp(18px, 1.8vw, 30px);
   }
+}
+
+/* V2: Creative Studio typography */
+.creative-studio .studio-heading {
+  font-family: 'Gambetta Light', 'Gambetta', 'Times New Roman', 'Iowan Old Style', serif;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #3e3e3e;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  font-size: clamp(30px, 2.1vw, 38px);
+}
+
+.creative-studio .studio-text {
+  max-width: min(1080px, 88vw);
+}
+
+.creative-studio .studio-byline,
+.creative-studio .studio-para {
+  font-family: 'Gambetta', 'Times New Roman', 'Iowan Old Style', serif;
+  font-weight: 500;
+  color: #3e3e3e;
+}
+
+.creative-studio .studio-byline {
+  font-size: clamp(12px, 0.95vw, 15px);
+  line-height: 1.65;
+}
+
+.creative-studio .studio-para {
+  font-size: clamp(12px, 0.95vw, 15px);
+  line-height: 1.65;
+  max-width: 100%;
+}
+
+.creative-studio .studio-para:nth-child(1),
+.creative-studio .studio-para:nth-child(2),
+.creative-studio .studio-para:nth-child(3),
+.creative-studio .studio-para:nth-child(4),
+.creative-studio .studio-para:nth-child(5) {
+  max-width: 100%;
 }
 
 /* V2: slightly smaller hero image */

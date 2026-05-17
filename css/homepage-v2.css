@@ -1,0 +1,18 @@
+/* ==================================================
+   HOMEPAGE V2 STYLES
+   --------------------------------------------------
+   This file is intentionally separate from `homepage.css`
+   so you can build a second client-approved homepage style
+   without affecting the current homepage.
+   ================================================== */
+
+/* Start from current homepage look, then override below */
+@import url('./homepage.css?v=20260208-24');
+
+/*
+  Add your V2 navbar/content layout styles here.
+  Example:
+
+  .site-header.home-header { ... }
+  .hero { ... }
+*/

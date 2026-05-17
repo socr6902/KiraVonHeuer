@@ -9,6 +9,128 @@
 /* Start from current homepage look, then override below */
 @import url('./homepage.css?v=20260208-24');
 
+@font-face {
+  font-family: 'Gambetta Light';
+  src: url('../Gambetta-Light.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gambetta';
+  src: url('../Gambetta-Medium.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@media (min-width: 1141px) {
+  .site-header.home-header {
+    padding: 0 !important;
+    min-height: 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .v2-nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.35fr auto auto 1fr;
+    align-items: center;
+    gap: clamp(24px, 3vw, 54px);
+    padding: clamp(14px, 1.5vw, 22px) clamp(24px, 3vw, 54px);
+    font-family: 'Gambetta', 'Times New Roman', 'Iowan Old Style', serif;
+    font-weight: 500;
+  }
+
+  .v2-brand {
+    margin: 0;
+    line-height: 1;
+    justify-self: center;
+  }
+
+  .v2-shop {
+    margin: 0;
+    line-height: 1;
+    justify-self: start;
+    margin-left: clamp(16px, 1.6vw, 28px);
+  }
+
+  .v2-shop a,
+  .v2-nav-left a,
+  .v2-nav-right a {
+    color: #3e3e3e;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    white-space: nowrap;
+    opacity: 1;
+  }
+
+  .v2-brand a {
+    color: #3e3e3e;
+    text-decoration: none;
+    white-space: nowrap;
+    opacity: 1;
+  }
+
+  .v2-brand a {
+    font-size: clamp(30px, 2.1vw, 38px);
+    letter-spacing: 0.02em;
+    font-family: 'Gambetta Light', 'Gambetta', 'Times New Roman', 'Iowan Old Style', serif;
+    font-weight: 300;
+  }
+
+  .v2-shop a {
+    font-size: clamp(14px, 1vw, 18px);
+    font-weight: 500;
+  }
+
+  .v2-nav-left,
+  .v2-nav-right {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    min-width: 0;
+  }
+
+  .v2-nav-left {
+    justify-self: start;
+  }
+
+  .v2-nav-right {
+    justify-self: end;
+  }
+
+  .v2-nav-left a,
+  .v2-nav-right a {
+    font-size: clamp(14px, 1vw, 18px);
+    letter-spacing: 0;
+    text-transform: none;
+    font-weight: 500;
+    padding: 0;
+    line-height: 1.1;
+  }
+
+  .v2-nav-left a:not(:last-child)::after,
+  .v2-nav-right a:not(:last-child)::after {
+    content: ',';
+    margin-right: 0.3ch;
+  }
+
+  .v2-nav-left a:not(:last-child),
+  .v2-nav-right a:not(:last-child) {
+    margin-right: 0.15ch;
+  }
+}
+
+@media (min-width: 1141px) and (max-width: 1460px) {
+  .v2-nav {
+    grid-template-columns: 1.2fr auto auto 1fr;
+    gap: clamp(18px, 1.8vw, 30px);
+  }
+}
+
 /* V2: slightly smaller hero image */
 :root {
   --v2-hero-width: min(560px, 56vmin);

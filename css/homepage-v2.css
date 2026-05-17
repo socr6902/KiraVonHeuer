@@ -208,10 +208,12 @@
 
 .dual-card-left {
   align-items: flex-end;
+  transform: translateY(clamp(36px, 5vw, 92px));
 }
 
 .dual-card-right {
   align-items: flex-start;
+  transform: translateY(clamp(-36px, -5vw, -92px));
 }
 
 .dual-card-left .dual-media-link {
@@ -225,7 +227,7 @@
 
 .dual-card-left .dual-media-link,
 .dual-card-left .dual-title-link {
-  margin-right: clamp(14px, 1.4vw, 28px);
+  margin-right: clamp(28px, 2.6vw, 52px);
 }
 
 .dual-card-right .dual-media-link {
@@ -288,6 +290,7 @@
   .dual-card-left,
   .dual-card-right {
     align-items: center;
+    transform: none;
   }
 
   .dual-card-left .dual-media-link,

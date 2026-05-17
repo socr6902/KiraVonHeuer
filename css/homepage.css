@@ -7,6 +7,8 @@
   --accent:#111;
   --muted:#666;
   --header-offset:88px; /* JS updates this to actual navbar height */
+  --header-hero-gap:58px;
+  --hero-image-top-offset:40px;
 }
 
 /* Header layout for homepage: centered brand with two nav groups */
@@ -18,7 +20,7 @@
   z-index:1000;
   padding:28px 32px !important;
   min-height:104px;
-  margin-bottom:35px;
+  margin-bottom:0;
 }
 .home-header .header-inner{max-width:var(--site-max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:44px;padding:0 56px}
 .header-desktop .nav-left{gap:34px;justify-self:start}
@@ -71,8 +73,9 @@
   margin-right:-50vw;
   min-height:calc(100vh - 72px); /* fill viewport under header (header min-height is 72px) */
   display:flex;
-  align-items:center;
+  align-items:flex-start;
   justify-content:center;
+  padding-top:var(--header-hero-gap);
   background:#fff; /* white background instead of black */
   margin-bottom:72px;
 }
@@ -110,11 +113,11 @@
 .creative-studio .studio-text{ max-width:760px; margin:0 auto; }
 .hero-image{display:none} /* hide previous full-bleed background; center a square image instead */
 .hero-overlay{
-  position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;height:100%;color:#fff;padding:18px;width:100%
+  position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;height:100%;color:#fff;padding:0 18px 18px;width:100%
 }
-.hero-image-wrap{position:relative;display:inline-block}
+.hero-image-wrap{position:relative;display:inline-block;margin-top:var(--hero-image-top-offset)}
 .hero-center-img{display:block;width:min(680px,63vmin);height:min(792px,72vmin);object-fit:cover;margin-bottom:10px;border:3px solid #000}
-.hero-pin{position:absolute;left:50%;top:0;transform:translate(-50%,-50%);width:min(236px,24vmin);height:auto;z-index:4;pointer-events:none;filter:drop-shadow(0 10px 24px rgba(0,0,0,0.6))}
+.hero-pin{position:absolute;left:50%;top:0;transform:translate(-50%, -50%);width:min(236px,24vmin);height:auto;z-index:4;pointer-events:none;filter:drop-shadow(0 10px 24px rgba(0,0,0,0.6))}
 .hero-title{font-family:serif;font-size:40px;margin:0 0 12px;font-weight:400;letter-spacing:0.02em;color:#fff}
 .hero-sub{margin:0 0 22px;color:rgba(255,255,255,0.85);font-style:italic}
 .hero-cta{display:inline-block;padding:10px 16px;border:1px solid #fff;text-decoration:none;color:#fff;font-size:13px}
@@ -461,7 +464,7 @@
   /* Responsive header: hide desktop header and show mobile header */
   .home-header{padding:16px 18px}
   .site-header.home-header{padding:16px 24px !important; min-height:68px}
-  .site-header.home-header{margin-bottom:24px}
+  .site-header.home-header{margin-bottom:0}
   /* Hide the desktop header completely when mobile header is active */
   .header-desktop{display:none !important}
   /* Also hide any legacy .header-inner to be safe */
@@ -469,9 +472,9 @@
   .header-mobile{display:flex !important;align-items:center;justify-content:center;position:relative;z-index:95;min-height:60px}
   /* position hamburger symmetrically with the cart and give matching touch area */
   .header-mobile .mobile-toggle{display:block;position:absolute;left:16px;top:50%;transform:translateY(-50%);z-index:95;padding:10px}
-  /* mobile brand: match desktop size (50px) and center in the flex container */
-  .header-mobile .brand.mobile-brand{font-size:40px;position:relative;transform:translateY(6%);z-index:90;letter-spacing:-0.02em;line-height:1;display:block;text-align:center;margin:0}
-  .header-mobile .brand.mobile-brand a{display:block;line-height:1}
+  /* mobile brand: keep same size as desktop and avoid clipping */
+  .header-mobile .brand.mobile-brand{font-size:34px;position:relative;transform:none;z-index:90;letter-spacing:-0.02em;line-height:1.12;display:block;text-align:center;margin:0;padding-top:2px}
+  .header-mobile .brand.mobile-brand a{display:block;line-height:inherit}
   /* give the collapsed mobile menu a bit more breathing room and ensure specificity */
   /* ensure mobile menu container matches header gutter for consistent visuals */
   /* slightly increase mobile menu padding for more breathing room */
@@ -481,7 +484,7 @@
 
 @media (max-width:768px){
   .hero{margin-bottom:42px}
-  .hero-overlay{padding:14px}
+  .hero-overlay{padding:0 14px 14px}
   .hero-center-img{width:min(520px,84vw);height:auto;margin-bottom:8px;border:2px solid #000}
   .hero-pin{width:min(170px,34vw)}
 
@@ -513,7 +516,7 @@
   .hero{min-height:320px}
   .hero-center-img{width:min(360px,86vw);height:auto}
   .hero-pin{width:min(142px,36vw)}
-  .header-mobile .brand.mobile-brand{font-size:34px}
+  .header-mobile .brand.mobile-brand{font-size:34px;line-height:1.12;padding-top:2px}
   .site-header.home-header .mobile-menu{padding:20px 18px}
   .hero-title{font-size:22px}
 }
